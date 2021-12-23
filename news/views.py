@@ -6,7 +6,7 @@ from news.serializers import NewsSerializer
 
 
 class NewsModelViewSet(viewsets.ModelViewSet):
-    queryset = News.objects.all().order_by('-published_date')
+    queryset = News.objects.all().order_by('-date')
     serializer_class = NewsSerializer
     permission_classes = [AllowAny]
     http_method_names = ['get']
